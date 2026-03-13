@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Team - BetterActs Collective">
+
+<Nav />
+
+<!-- ============================================ -->
+<!-- INTRO                                        -->
+<!-- ============================================ -->
+<section class="bg-cream pt-32 md:pt-40 pb-24 md:pb-32">
+  <div class="max-w-4xl mx-auto px-6 md:px-10">
+    <div class="fade-in">
+      <h1 class="font-heading font-bold text-[40px] md:text-[64px] leading-[1.1] text-dark mb-8">
+        Our Team
+      </h1>
+      <p class="text-base md:text-lg text-muted-text leading-relaxed max-w-2xl">
+        BetterActs Collective was founded by three active volunteers and not-for-profit operators. We're not observers. We built this from inside the sector.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- FOUNDERS                                     -->
+<!-- ============================================ -->
+<section class="bg-white py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-3 gap-12 md:gap-10">
+      <!-- Feifei -->
+      <div class="fade-in">
+        <img src="/founders-pics/feifei-photo.png" alt="Feifei Liao" class="w-32 h-32 rounded-full object-cover mx-auto md:mx-0 mb-6" />
+        <h3 class="font-heading text-xl font-bold text-dark mb-1 text-center md:text-left">Feifei Liao</h3>
+        <p class="text-sm text-muted-text text-center md:text-left mb-4">Co-Founder and Director</p>
+        <p class="text-base text-muted-text leading-relaxed mb-5">
+          Born in Sichuan, China, Feifei moved to Melbourne alone at 16 as an international student. She is the founder of social enterprise Feifei Curiosity and the not-for-profit Our Point 3, which supports LGBTQIA+ international students, alumni, and allies. Through initiatives like the Voices of Us podcast and the Beyond Identity creative program series, Feifei has spent over a decade connecting communities through creativity, storytelling, and advocacy. She brings deep experience in community building, facilitation, and sector partnerships across local councils, education providers, and state government.
+        </p>
+        <a href="https://www.linkedin.com/in/feifei-liao/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-orange font-semibold text-sm hover:text-amber transition-colors">
+          Connect on LinkedIn →
+        </a>
+      </div>
+      <!-- Juliet -->
+      <div class="fade-in" style="transition-delay: 0.1s;">
+        <img src="/founders-pics/juliet-photo.png" alt="Juliet Wong Min" class="w-32 h-32 rounded-full object-cover mx-auto md:mx-0 mb-6" />
+        <h3 class="font-heading text-xl font-bold text-dark mb-1 text-center md:text-left">Juliet Wong Min</h3>
+        <p class="text-sm text-muted-text text-center md:text-left mb-4">Co-Founder and Director</p>
+        <p class="text-base text-muted-text leading-relaxed mb-5">
+          Originally from Mauritius, Juliet is based in Sydney and works as Design Lead at The Aquarium Professional Services. Her volunteering roots go back to the Girl Guides in Mauritius, and she continued that commitment in Australia with organisations including VicWise (now Auswise), Story Is Connection, and Our Point 3, where she was part of the team that launched the Voices of Us podcast. She also mentors design students at RMIT. At BetterActs Collective, Juliet leads design and digital experience.
+        </p>
+        <a href="https://www.linkedin.com/in/juliet-wong-min/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-orange font-semibold text-sm hover:text-amber transition-colors">
+          Connect on LinkedIn →
+        </a>
+      </div>
+      <!-- Ujas -->
+      <div class="fade-in" style="transition-delay: 0.2s;">
+        <img src="/founders-pics/Ujas-photo.png" alt="Ujas Patel" class="w-32 h-32 rounded-full object-cover mx-auto md:mx-0 mb-6" />
+        <h3 class="font-heading text-xl font-bold text-dark mb-1 text-center md:text-left">Ujas Patel</h3>
+        <p class="text-sm text-muted-text text-center md:text-left mb-4">Co-Founder and Director</p>
+        <p class="text-base text-muted-text leading-relaxed mb-5">
+          Ahmedabad-born and Sydney-based, Ujas holds a BSc in Computer Science from the University of Melbourne and an MBA from UNSW's AGSM. His background spans health-tech, software development, and data. Co-founding his university's Bollywood Club, and experiencing firsthand the chaos of ad hoc volunteer coordination, set the direction for BetterActs. He has volunteered with the City of Melbourne, Beyond Blue, and the award-winning Act of Translation.
+        </p>
+        <a href="https://www.linkedin.com/in/ujas-patel" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-orange font-semibold text-sm hover:text-amber transition-colors">
+          Connect on LinkedIn →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<Footer />
+
+<script>
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  fadeEls.forEach(el => fadeObserver.observe(el));
+</script>
+
+</Layout>

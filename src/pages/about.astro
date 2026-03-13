@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About - BetterActs Collective">
+
+<Nav />
+
+<!-- ============================================ -->
+<!-- INTRO                                        -->
+<!-- ============================================ -->
+<section class="bg-cream pt-32 md:pt-40 pb-24 md:pb-32">
+  <div class="max-w-4xl mx-auto px-6 md:px-10">
+    <div class="fade-in">
+      <h1 class="font-heading font-bold text-[40px] md:text-[64px] leading-[1.1] text-dark mb-8">
+        About BetterActs Collective
+      </h1>
+      <p class="text-xl md:text-2xl text-dark/80 font-medium mb-6 font-heading" style="font-variation-settings: 'opsz' 20;">
+        We exist because the sector's smallest players carry the most weight and get the least support.
+      </p>
+      <p class="text-base md:text-lg text-muted-text leading-relaxed mb-6">
+        BetterActs Collective is an Australian not-for-profit incorporated organisation. We build tools and community for the small not-for-profits and charities that everyone else forgot to build for.
+      </p>
+      <p class="text-base md:text-lg text-muted-text leading-relaxed">
+        We're not researchers. We're not consultants. We're people who've run volunteer programs, hit the admin walls, and decided to do something about it.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- MISSION & VISION                             -->
+<!-- ============================================ -->
+<section class="bg-white py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-12 md:gap-20">
+      <div class="fade-in">
+        <p class="text-xs md:text-sm uppercase tracking-[0.2em] font-semibold text-muted-text mb-4">Our Mission</p>
+        <p class="text-base md:text-lg text-muted-text leading-relaxed">
+          To reduce the operational burden on small and mid-sized not-for-profits, so the people running them can focus on why they started.
+        </p>
+      </div>
+      <div class="fade-in" style="transition-delay: 0.1s;">
+        <p class="text-xs md:text-sm uppercase tracking-[0.2em] font-semibold text-muted-text mb-4">Our Vision</p>
+        <p class="text-base md:text-lg text-muted-text leading-relaxed">
+          An Australian not-for-profit sector where no organisation fails its community because it couldn't afford the right infrastructure.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- OUR STORY                                    -->
+<!-- ============================================ -->
+<section class="bg-cream py-24 md:py-32">
+  <div class="max-w-4xl mx-auto px-6 md:px-10">
+    <div class="fade-in">
+      <p class="text-xs md:text-sm uppercase tracking-[0.2em] font-semibold text-muted-text mb-4">Our Story</p>
+      <h2 class="font-heading text-[32px] md:text-[44px] font-bold text-dark mb-6 leading-tight">
+        Our Story
+      </h2>
+      <p class="text-base md:text-lg text-muted-text leading-relaxed mb-6">
+        BetterActs Collective was founded by Feifei Liao, Ujas Patel, and Juliet Wong Min. All active volunteers and not-for-profit operators themselves. They hit the same walls every small not-for-profit hits: too much admin, not enough support, tools built for organisations ten times their size. So they built what they needed. And made it available to everyone else.
+      </p>
+      <a href="/team" class="inline-flex items-center text-orange font-semibold text-base hover:text-amber transition-colors">
+        Meet the team →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- GOVERNANCE & LEGAL                           -->
+<!-- ============================================ -->
+<section class="bg-white py-24 md:py-32">
+  <div class="max-w-4xl mx-auto px-6 md:px-10">
+    <div class="fade-in">
+      <h2 class="font-heading text-[32px] md:text-[44px] font-bold text-dark mb-14 md:mb-20 leading-tight">
+        Governance and Legal
+      </h2>
+    </div>
+    <div class="space-y-12">
+      <div class="fade-in">
+        <h3 class="font-heading text-xl md:text-2xl font-bold text-dark mb-3">BetterActs Collective Inc.</h3>
+        <p class="text-base text-muted-text leading-relaxed mb-2">Incorporated not-for-profit organisation. ABN 90 406 224 512.</p>
+        <p class="text-base text-muted-text leading-relaxed">BetterActs Collective is incorporated in Melbourne VIC 3053 and recognised by the Australian Taxation Office as a not-for-profit organisation.</p>
+      </div>
+      <div class="border-t border-dark/10"></div>
+      <div class="fade-in">
+        <h3 class="font-heading text-xl md:text-2xl font-bold text-dark mb-3">How we're run.</h3>
+        <p class="text-base text-muted-text leading-relaxed">The organisation is currently volunteer-run. All three co-founders serve as directors on an unpaid basis.</p>
+      </div>
+      <div class="border-t border-dark/10"></div>
+      <div class="fade-in">
+        <h3 class="font-heading text-xl md:text-2xl font-bold text-dark mb-3">How funds are used.</h3>
+        <p class="text-base text-muted-text leading-relaxed">Funds go directly toward two things: running peer events and community programs for not-for-profit operators, and ongoing development of our volunteer management tool for small organisations. No funds are distributed to members or directors.</p>
+      </div>
+      <div class="border-t border-dark/10"></div>
+      <div class="fade-in">
+        <h3 class="font-heading text-xl md:text-2xl font-bold text-dark mb-3">Contact.</h3>
+        <p class="text-base text-muted-text leading-relaxed">Melbourne VIC 3053</p>
+        <p class="text-base text-muted-text leading-relaxed">info@betteractscollective.org</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<Footer />
+
+<script>
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  fadeEls.forEach(el => fadeObserver.observe(el));
+</script>
+
+</Layout>
