@@ -3,16 +3,15 @@ const currentPath = Astro.url.pathname;
 ---
 
 <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
-    <a href="/" class="flex items-center gap-2">
-      <img src="/better-acts-logo.png" alt="BetterActs Collective" class="h-8 md:h-10" />
-      <span class="font-heading text-lg md:text-xl font-semibold text-dark">BetterActs Collective</span>
+  <div id="nav-inner" class="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
+    <a href="/" class="flex items-center">
+      <img id="nav-logo" src="/BetterActs Collective-new-logo.png" alt="BetterActs Collective" />
     </a>
     <div class="hidden md:flex items-center gap-8 text-sm font-medium text-dark/80">
-      <a href="/" class:list={["hover:text-orange transition-colors", { "text-orange": currentPath === "/" }]}>Home</a>
-      <a href="/about" class:list={["hover:text-orange transition-colors", { "text-orange": currentPath === "/about" || currentPath === "/about/" }]}>About</a>
-      <a href="/team" class:list={["hover:text-orange transition-colors", { "text-orange": currentPath === "/team" || currentPath === "/team/" }]}>Team</a>
-      <a href="/programs" class:list={["hover:text-orange transition-colors", { "text-orange": currentPath === "/programs" || currentPath === "/programs/" }]}>Programs</a>
+      <a href="/" class:list={["nav-link hover:text-sage transition-colors", { "text-sage is-active": currentPath === "/" }]}>Home</a>
+      <a href="/about" class:list={["nav-link hover:text-sage transition-colors", { "text-sage is-active": currentPath === "/about" || currentPath === "/about/" }]}>About</a>
+      <a href="/team" class:list={["nav-link hover:text-sage transition-colors", { "text-sage is-active": currentPath === "/team" || currentPath === "/team/" }]}>Team</a>
+      <a href="/programs" class:list={["nav-link hover:text-sage transition-colors", { "text-sage is-active": currentPath === "/programs" || currentPath === "/programs/" }]}>Programs</a>
       <a href="/get-in-touch" class="inline-flex items-center px-5 py-2 rounded-full bg-orange text-white font-semibold text-sm hover:bg-amber transition-colors btn-hover">Get in Touch</a>
     </div>
     <!-- Mobile hamburger -->

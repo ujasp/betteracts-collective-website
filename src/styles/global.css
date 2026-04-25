@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-orange: #E8782A;
-  --color-amber: #C4550A;
-  --color-cream: #FBF7F0;
+  --color-orange: #E78A4B;
+  --color-amber: #C76B30;
+  --color-cream: #F1F3ED;
   --color-dark: #1C1208;
-  --color-muted-tint: #FDF0E4;
-  --color-muted-text: #7A6654;
+  --color-muted-tint: #E6EAE2;
+  --color-muted-text: #5F6A5C;
+  --color-sage: #465C47;
+  --color-sage-light: #98A68D;
+  --color-sage-deep: #1F2D20;
 
   --font-heading: 'Fraunces', serif;
   --font-body: 'DM Sans', sans-serif;
@@ -31,7 +34,7 @@
 /* Base styles */
 html {
   scroll-behavior: smooth;
-  background-color: #FBF7F0;
+  background-color: #F1F3ED;
   color: #1C1208;
   font-family: 'DM Sans', sans-serif;
   font-size: 18px;
@@ -81,7 +84,81 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Nav styles */
 .nav-solid {
-  background-color: rgba(251, 247, 240, 0.97);
+  background-color: rgba(241, 243, 237, 0.97);
   backdrop-filter: blur(8px);
   box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+
+#nav-inner {
+  height: 6rem;
+  transition: height 0.35s ease;
+}
+@media (min-width: 768px) {
+  #nav-inner {
+    height: 7rem;
+  }
+}
+.nav-solid #nav-inner {
+  height: 4rem;
+}
+@media (min-width: 768px) {
+  .nav-solid #nav-inner {
+    height: 5rem;
+  }
+}
+
+#nav-logo {
+  height: 4rem;
+  transition: height 0.35s ease;
+}
+@media (min-width: 768px) {
+  #nav-logo {
+    height: 5rem;
+  }
+}
+.nav-solid #nav-logo {
+  height: 2.5rem;
+}
+@media (min-width: 768px) {
+  .nav-solid #nav-logo {
+    height: 3rem;
+  }
+}
+
+/* Squiggle divider */
+.squiggle-divider {
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+}
+.squiggle-divider svg {
+  width: 100%;
+  max-width: 72rem;
+  height: 60px;
+}
+.squiggle-divider svg path {
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  transition: stroke-dashoffset 1.2s ease-out;
+}
+.squiggle-divider.is-drawn svg path {
+  stroke-dashoffset: 0;
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  width: 100%;
 }
