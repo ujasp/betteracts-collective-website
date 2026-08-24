@@ -1,0 +1,554 @@
+---
+import LegalPage from '../layouts/LegalPage.astro';
+
+const sections = [
+  { id: 'who-this-policy-covers', label: 'Who this policy covers' },
+  { id: 'two-roles', label: 'Important note for Lori: two different roles we play' },
+  { id: 'what-we-collect', label: 'What personal information we collect' },
+  { id: 'how-we-collect', label: 'How we collect personal information' },
+  { id: 'cookies', label: 'Cookies, analytics and tracking' },
+  { id: 'why-we-collect', label: 'Why we collect, hold, use and disclose personal information' },
+  { id: 'disclosure', label: 'Disclosure of personal information' },
+  { id: 'service-providers', label: 'Service providers and where information is stored' },
+  { id: 'data-security', label: 'Data security' },
+  { id: 'data-breaches', label: 'Data breaches' },
+  { id: 'retention', label: 'How long we keep information' },
+  { id: 'access-correction', label: 'Access to and correction of your personal information' },
+  { id: 'complaints', label: 'How to make a complaint' },
+  { id: 'changes', label: 'Changes to this policy' },
+  { id: 'contact', label: 'Contact us' },
+];
+---
+
+<LegalPage
+  title="Privacy Policy - BetterActs Collective"
+  heading="Privacy Policy"
+  lead="How we collect, use, hold and disclose personal information across our websites and the Lori app."
+  lastUpdated="24th Aug 2026"
+  sections={sections}
+>
+
+  <!-- 1 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 01</p>
+    <h2 id="who-this-policy-covers">Who this policy covers</h2>
+    <p>
+      This Privacy Policy explains how we collect, use, hold and disclose personal information across the following
+      websites and the Lori application (together, our <strong>Services</strong>):
+    </p>
+    <div class="legal-table-wrap">
+      <table class="legal-table">
+        <thead>
+          <tr><th>Service</th><th>Operated by</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>betteracts.com</td><td>BetterActs Pty Ltd (ABN 82 692 853 544, ACN 692 853 544)</td></tr>
+          <tr><td>betteractscollective.org</td><td>BetterActs Collective Inc. (ABN 90 406 224 512)</td></tr>
+          <tr><td>lorivolunteer.org (the Lori app)</td><td>BetterActs Collective Inc. (ABN 90 406 224 512)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      We also currently operate getlori.tech, which will be retired and redirected to lorivolunteer.org. This policy
+      applies to it in the meantime.
+    </p>
+    <p>
+      In this policy, 'BetterActs', 'we', 'us' and 'our' refer to whichever of BetterActs Pty Ltd or BetterActs
+      Collective Inc. operates the Service you are using. Lori is operated exclusively by BetterActs Collective Inc.
+      The two are separate legal entities, and each is responsible only for the personal information it holds.
+    </p>
+    <p>
+      Our information handling practices are set out in this policy and are based on the Australian Privacy Principles
+      (APPs) in the <em>Privacy Act 1988</em> (Cth). We will handle personal information in accordance with them, and we
+      will review and update them as our Services develop. The APPs are available from the Office of the Australian
+      Information Commissioner (OAIC) at <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer">oaic.gov.au</a>.
+    </p>
+  </div>
+
+  <!-- 2 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 02</p>
+    <h2 id="two-roles">Important note for Lori: two different roles we play</h2>
+    <p>
+      Lori is used by organisations (<strong>Customers</strong>) to manage their own volunteers (<strong>End Users</strong>).
+      We handle personal information in two different capacities.
+    </p>
+    <h3>(a) Information we collect and control ourselves</h3>
+    <p>
+      Expressions of Interest submitted through our websites, a Customer's account and billing details, support and
+      bug-report correspondence, technical logs, and marketing subscriptions where someone has opted in. We are directly
+      responsible for this, and the rest of this policy explains how we handle it.
+    </p>
+    <h3>(b) Information Customers or their volunteers enter into Lori</h3>
+    <p>
+      A volunteer's name, contact details, availability, roles or checks (<strong>Customer Data</strong>). This is
+      collected and controlled by the Customer organisation, not by BetterActs. We process it only as a service
+      provider, on the Customer's instructions, to run Lori.
+    </p>
+    <div class="legal-callout">
+      <p>
+        If you are a volunteer with questions about how your information is used, contact the organisation that invited
+        you to Lori first. They control that information and are responsible for explaining how they use it.
+      </p>
+    </div>
+    <h3>Our undertakings to Customers</h3>
+    <p>In respect of Customer Data we will:</p>
+    <ul>
+      <li>process it only to provide, maintain, secure and support Lori, on the Customer's instructions or as required by law;</li>
+      <li>not use it for our own purposes, and not use it to train or evaluate machine learning or AI models;</li>
+      <li>not disclose one Customer's data to any other Customer;</li>
+      <li>not send marketing to your volunteers. We do not currently add volunteers to any mailing list, and volunteers only hear from us about the operation of their own account. If this ever changes it will be opt-in only, and we will update this policy and notify you before it takes effect;</li>
+      <li>impose confidentiality and security obligations on any service provider we engage (section 8);</li>
+      <li>assist the Customer to respond to access, correction and deletion requests from their volunteers; and</li>
+      <li>on request, or on account closure, delete Customer Data in line with section 11.</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 03</p>
+    <h2 id="what-we-collect">What personal information we collect</h2>
+
+    <h3>3.1 Website contact forms (Expressions of Interest) — we control this</h3>
+    <p>
+      When you submit an Expression of Interest through a contact form on any of our websites, we collect your name,
+      email address, organisation and role, and the content of your message.
+    </p>
+
+    <h3>3.2 Lori Customer accounts and billing — we control this</h3>
+    <p>When an organisation creates a Customer account, or upgrades to a paid plan, we collect:</p>
+    <ul>
+      <li>the name, email address and role of the person setting up or administering the account;</li>
+      <li>the organisation's name and contact details;</li>
+      <li>authentication data — a hashed password and session identifiers. We never store your password in readable form;</li>
+      <li>selected plan, billing cycle and subscription status; and</li>
+      <li>transaction records (amounts, dates, invoice history).</li>
+    </ul>
+    <p>
+      Payments are processed by Stripe. We do not collect or store full card numbers, expiry dates or CVCs — these go
+      directly into Stripe's PCI-DSS compliant payment form and are handled under Stripe's privacy policy. We receive
+      only limited metadata (transaction status, amount, masked card reference) to reconcile subscriptions.
+    </p>
+
+    <h3>3.3 Technical and log information — we control this</h3>
+    <p>
+      Our systems automatically record IP address, browser and device type, request timestamps, actions taken in the
+      app, and error logs. We use this only for security, fraud prevention, fault diagnosis and service reliability.
+    </p>
+
+    <h3>3.4 Volunteer (End User) information entered into Lori — the Customer controls this</h3>
+    <p>When a Customer invites a volunteer, or enters volunteer details into Lori, the Customer may collect:</p>
+    <ul>
+      <li>name and email address;</li>
+      <li>phone number and postal address;</li>
+      <li>emergency contact details (which are the personal information of a third party);</li>
+      <li>availability, shift and attendance records, roles, skills and training records;</li>
+      <li>notes recorded by the Customer's coordinators; and</li>
+      <li>any other fields the Customer chooses to add.</li>
+    </ul>
+    <h4>Sensitive information and government identifiers</h4>
+    <p>
+      Customers may choose to record sensitive information or government-related identifiers — for example Working with
+      Children Check (WWCC) numbers, police check outcomes, driver licence details, RSA certificates, or health, dietary
+      and accessibility information. As set out in section 2, this is the Customer's information to control. It is the
+      Customer's responsibility to:
+    </p>
+    <ul>
+      <li>obtain the volunteer's consent before collecting sensitive information;</li>
+      <li>comply with APP 9 and with State and Territory laws governing the use and disclosure of working-with-children and police check information — including the <em>Worker Screening Act 2020</em> (Vic) and the <em>Child Protection (Working with Children) Act 2012</em> (NSW), which restrict how check information may be used and shared; and</li>
+      <li>collect only what is reasonably necessary.</li>
+    </ul>
+    <h4>Recommended practice</h4>
+    <p>
+      Where a Customer's purpose is limited to verifying that a check is current, we recommend that the Customer record
+      only the verification status, the expiry date, and the identity of the person who conducted the verification,
+      rather than the identifier itself or an image of the underlying document. Lori is designed to support this
+      approach. Minimising the identifiers held materially reduces the likelihood that an unauthorised disclosure would
+      result in serious harm.
+    </p>
+    <h4>Document uploads</h4>
+    <p>
+      Lori does not currently support uploading images or scans of licences, WWCCs or other credentials. We are
+      developing this feature. Before it is released we will update this policy, tell Customers where those files will
+      be stored, and give Customers the choice of whether to use it.
+    </p>
+
+    <h3>3.5 Volunteers who are minors</h3>
+    <p>
+      Some Customers engage volunteers under 18. Where a volunteer is under 18, the Customer is responsible for deciding
+      whether that person can consent to the collection of their information, and for obtaining parental or guardian
+      consent where they cannot. We do not knowingly collect information directly from children other than through a
+      Customer's use of Lori. If you believe a child's information has been provided to us in another way, contact us
+      and we will delete it.
+    </p>
+
+    <h3>3.6 Bug reports and support — we control this</h3>
+    <p>
+      Lori is in beta. If you report a bug, we collect your name, email address, screenshots and your description of the
+      issue, to investigate and respond. Please avoid including volunteer personal information in a bug report unless it
+      is necessary to diagnose the problem.
+    </p>
+
+    <h3>3.7 Anonymity and pseudonymity</h3>
+    <p>
+      Where lawful and practicable you may deal with us anonymously or under a pseudonym — for example, a general
+      enquiry. This is not practicable where we need to identify you to provide an account, process a payment, or
+      respond to an access request.
+    </p>
+  </div>
+
+  <!-- 4 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 04</p>
+    <h2 id="how-we-collect">How we collect personal information</h2>
+    <p>
+      Wherever practical, we (or, for volunteer information, the Customer) collect personal information directly from
+      the individual — when someone submits a contact form, sets up or manages a Customer account, registers as an
+      invited volunteer, or contacts us for support.
+    </p>
+    <p>We also collect indirectly in two situations:</p>
+    <ul>
+      <li><strong>From Stripe</strong> — limited transaction metadata when a Customer pays.</li>
+      <li><strong>From Customers</strong> — volunteer details a Customer enters into Lori before inviting that volunteer. Where this happens, the Customer is responsible for telling the volunteer. Lori's invitation email identifies which organisation invited them.</li>
+    </ul>
+  </div>
+
+  <!-- 5 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 05</p>
+    <h2 id="cookies">Cookies, analytics and tracking</h2>
+    <h3>Lori app</h3>
+    <p>
+      Lori uses only strictly necessary cookies and browser storage — to keep you signed in and to keep your session
+      secure. Lori does not use advertising cookies, cross-site tracking, or third-party marketing pixels.
+    </p>
+    <h3>Marketing websites</h3>
+    <p>
+      We use Vercel Web Analytics on our marketing sites to understand aggregate traffic — page views, referrers,
+      country, device type. Vercel Web Analytics does not set cookies and does not track visitors across websites; it
+      derives an anonymous, rotating identifier from request data and discards it. We cannot identify individual
+      visitors from it. Vercel processes this data on infrastructure outside Australia (see section 8).
+    </p>
+    <p>
+      If we introduce any additional analytics or tracking, we will update this section before doing so. We do not
+      respond to browser "Do Not Track" signals, as there is no agreed standard for interpreting them.
+    </p>
+  </div>
+
+  <!-- 6 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 06</p>
+    <h2 id="why-we-collect">Why we collect, hold, use and disclose personal information</h2>
+    <p>We use the information described in sections 3.1, 3.2, 3.3 and 3.6 to:</p>
+    <ul>
+      <li>respond to Expressions of Interest;</li>
+      <li>set up, bill and manage Customer accounts and subscriptions, including processing payments through Stripe;</li>
+      <li>authenticate users and secure accounts;</li>
+      <li>investigate and resolve bugs and support requests, particularly during beta;</li>
+      <li>monitor and improve the security, reliability and performance of our Services, using aggregated or de-identified data wherever possible;</li>
+      <li>meet legal, insurance, tax and reporting obligations, including obligations as an incorporated association; and</li>
+      <li>send updates or newsletters, only to people who have opted in.</li>
+    </ul>
+
+    <h3>Direct marketing</h3>
+    <p>
+      When someone sets up an organiser account on Lori, we offer an optional, unticked checkbox inviting them to
+      receive occasional emails from BetterActs about Lori, our roadmap and our work. It is off by default, separate
+      from accepting our terms, and declining it does not affect your use of Lori. If you tick it, we hold your name,
+      email address and the date and source of your consent as a record.
+    </p>
+    <p>
+      We do not currently send marketing to volunteers. Volunteers are not added to any mailing list, and we use
+      volunteer contact details only to operate Lori on their organisation's behalf. If we introduce a marketing opt-in
+      for volunteers in future, it will be opt-in only, we will update this policy, and we will notify Customers before
+      it takes effect.
+    </p>
+    <p>
+      We comply with the <em>Spam Act 2003</em> (Cth). Every commercial message identifies BetterActs as the sender and
+      contains a working unsubscribe link, which we action within 5 business days.
+    </p>
+
+    <h3>Everything else</h3>
+    <p>
+      For volunteer information described in section 3.4, we use it only to provide, maintain, secure and support Lori
+      on the Customer's behalf. We will not use personal information we control for a purpose other than the one it was
+      collected for, unless you would reasonably expect that use, you consent to it, or we are required or authorised by
+      law.
+    </p>
+
+    <h3>Artificial intelligence</h3>
+    <p>
+      We do not use personal information, including Customer Data, to train, fine-tune or evaluate machine learning or
+      AI models, and we do not permit our service providers to do so. If we build any AI-assisted feature into Lori, we
+      will update this policy and notify Customers before enabling it.
+    </p>
+  </div>
+
+  <!-- 7 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 07</p>
+    <h2 id="disclosure">Disclosure of personal information</h2>
+    <p>We may disclose personal information to:</p>
+    <ul>
+      <li>our people and contractors who need it to run our Services or support Customers, under confidentiality obligations;</li>
+      <li>the service providers listed in section 8, under contractual obligations to protect it and use it only for the purpose we engage them for;</li>
+      <li>our professional advisers — accountants, auditors, insurers, lawyers;</li>
+      <li>regulators or authorities where required or authorised by law, or to establish, exercise or defend a legal claim; and</li>
+      <li>an acquirer or successor entity if the Lori platform is transferred, merged or restructured — in which case we will notify affected Customers in advance and require the recipient to be bound by protections no weaker than this policy.</li>
+    </ul>
+    <p>
+      Within Lori, a Customer's administrators can access the volunteer information that Customer has collected — that
+      is the purpose of the app. We do not disclose one Customer's volunteer information to another Customer.
+    </p>
+    <p>
+      We do not sell personal information, and we do not disclose it to third parties for their own marketing purposes.
+    </p>
+  </div>
+
+  <!-- 8 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 08</p>
+    <h2 id="service-providers">Service providers and where information is stored</h2>
+    <p>
+      We use a small number of service providers. This table sets out what each handles and where. It is included so
+      Customers can assess their own cross-border disclosure obligations under APP 8.
+    </p>
+    <div class="legal-table-wrap">
+      <table class="legal-table">
+        <thead>
+          <tr><th>Provider</th><th>What it handles</th><th>Where it is stored</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supabase</td>
+            <td>Authentication for Lori — email addresses, hashed passwords, session tokens</td>
+            <td>Sydney, Australia (ap-southeast-2)</td>
+          </tr>
+          <tr>
+            <td>Neon (via Replit)</td>
+            <td>The main Lori database, including all Customer Data — volunteer names, contact details, availability, roles and any other fields Customers add</td>
+            <td>United States</td>
+          </tr>
+          <tr>
+            <td>Stripe</td>
+            <td>Payment processing and billing records for paid plans</td>
+            <td>United States and other countries in Stripe's global infrastructure</td>
+          </tr>
+          <tr>
+            <td>Resend</td>
+            <td>Transactional and notification email — recipient name, email address, message content</td>
+            <td>United States</td>
+          </tr>
+          <tr>
+            <td>Vercel</td>
+            <td>Marketing website hosting and aggregate website analytics</td>
+            <td>United States and global edge network</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legal-callout">
+      <p>
+        <strong>Notice to Customers.</strong> Volunteer information entered into Lori is stored on servers located in the
+        United States. This disclosure is made so that Customers may assess their own obligations, including any
+        obligation to notify their volunteers of overseas disclosure. Overseas recipients are subject to the laws of the
+        jurisdictions in which they operate, and Australian law may not be enforceable against them.
+      </p>
+    </div>
+    <p>
+      We contract with each provider on its standard data processing terms, including standard contractual clauses where
+      the provider offers them. We are actively working toward Australian data residency for the main database, and will
+      notify Customers before any change to where their data is stored — in either direction.
+    </p>
+  </div>
+
+  <!-- 9 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 09</p>
+    <h2 id="data-security">Data security</h2>
+    <p>
+      We take reasonable steps to protect personal information, including Customer Data, from misuse, interference,
+      loss, and unauthorised access, modification or disclosure. What we do:
+    </p>
+    <ul>
+      <li>encrypt data in transit using TLS, and rely on our infrastructure providers' encryption at rest;</li>
+      <li>store passwords only as salted hashes, never in readable form;</li>
+      <li>apply role-based access controls, so each Customer's data is logically separated and reachable only by that Customer's authorised administrators;</li>
+      <li>limit our own team's access to production data to those who need it for support, and only for as long as needed;</li>
+      <li>keep all card data with Stripe — it never touches our systems;</li>
+      <li>keep development and production environments separate, and do not use production data for testing; and</li>
+      <li>apply security updates to our software dependencies.</li>
+    </ul>
+    <p>
+      No method of electronic storage or transmission is entirely secure, and we do not warrant that personal
+      information will remain free from unauthorised access in all circumstances. Lori remains in beta and under active
+      development, and Customers should have regard to that when determining what information to enter into the
+      platform.
+    </p>
+    <p>
+      Customers are responsible for maintaining strong, unique account credentials and for revoking administrator access
+      promptly when a person ceases to require it.
+    </p>
+  </div>
+
+  <!-- 10 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 10</p>
+    <h2 id="data-breaches">Data breaches</h2>
+    <p>
+      If we become aware of unauthorised access to, unauthorised disclosure of, or loss of personal information:
+    </p>
+    <ul>
+      <li>we will contain and assess the incident promptly;</li>
+      <li>where Customer Data is affected, we will notify the affected Customer(s) without undue delay and in any event within 72 hours of becoming aware, with the information they need to meet their own notification obligations;</li>
+      <li>where information we control is affected and serious harm is likely, we will notify the OAIC and affected individuals in line with the Notifiable Data Breaches scheme; and</li>
+      <li>we will cooperate with the Customer's own investigation and notification process.</li>
+    </ul>
+    <p>
+      Customers must tell us as soon as practicable if they become aware of unauthorised access to their Lori account.
+    </p>
+  </div>
+
+  <!-- 11 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 11</p>
+    <h2 id="retention">How long we keep information</h2>
+    <div class="legal-table-wrap">
+      <table class="legal-table">
+        <thead>
+          <tr><th>Information</th><th>Retention</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Expression of Interest / contact form submissions</td>
+            <td>24 months from last contact, then deleted — unless you become a Customer or opt in to updates</td>
+          </tr>
+          <tr>
+            <td>Customer account, billing and transaction records</td>
+            <td>At least 5 years after account closure, as required by Australian tax and record-keeping law</td>
+          </tr>
+          <tr>
+            <td>Marketing subscription records</td>
+            <td>Until you unsubscribe, plus 2 years to evidence consent under the Spam Act</td>
+          </tr>
+          <tr>
+            <td>Support and bug-report correspondence</td>
+            <td>24 months from resolution</td>
+          </tr>
+          <tr>
+            <td>Technical and security logs</td>
+            <td>90 days</td>
+          </tr>
+          <tr>
+            <td>Volunteer information in Lori</td>
+            <td>While the Customer's account is active, or as the Customer instructs</td>
+          </tr>
+          <tr>
+            <td>Customer Data after account closure</td>
+            <td>30 days to allow recovery, then permanently deleted; backups purged within a further 30 days</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Customers can request deletion of their organisation's data at any time. We will action verified deletion requests
+      within 30 days and confirm in writing. When information is no longer needed, we take reasonable steps to securely
+      destroy or de-identify it.
+    </p>
+  </div>
+
+  <!-- 12 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 12</p>
+    <h2 id="access-correction">Access to and correction of your personal information</h2>
+    <p>
+      If you submitted an Expression of Interest, hold a Customer account, or are on our marketing list, you can ask us
+      for access to the personal information we hold about you, or ask us to correct it, at any time.
+    </p>
+    <p>
+      No fee to make a request. We may charge a reasonable administrative fee for providing copies. We may need to
+      verify your identity first. We will respond within 30 days. If we refuse, we will tell you why in writing and how
+      to complain.
+    </p>
+    <p>
+      If you are a volunteer and want to access or correct information a Customer holds about you in Lori, contact that
+      organisation directly — they control it. If you can't resolve it with them, contact us and we will help where we
+      reasonably can, including by raising it with that Customer.
+    </p>
+    <p>
+      <strong>Data export.</strong> Customers can export their organisation's data from Lori at any time. Contact us if
+      you need help.
+    </p>
+  </div>
+
+  <!-- 13 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 13</p>
+    <h2 id="complaints">How to make a complaint</h2>
+    <p>
+      If you have a concern about how we have handled information we control (see section 2), email us using the details
+      in section 15. We will acknowledge within 5 business days and respond substantively within 30 days.
+    </p>
+    <p>
+      If your concern is about a Customer's handling of your volunteer information, raise it with that organisation
+      first.
+    </p>
+    <p>
+      If you are not satisfied with our response, you can contact the Office of the Australian Information Commissioner:
+    </p>
+    <ul>
+      <li>Website: <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer">oaic.gov.au</a></li>
+      <li>Phone: 1300 363 992</li>
+      <li>Post: GPO Box 5288, Sydney NSW 2001</li>
+    </ul>
+  </div>
+
+  <!-- 14 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 14</p>
+    <h2 id="changes">Changes to this policy</h2>
+    <p>
+      We may update this policy from time to time, including as Lori's features and beta status change. The current
+      version is always available on our websites and inside Lori, with the 'last updated' date at the top.
+    </p>
+    <p>
+      Where a change materially affects how we handle personal information — including any change to where data is
+      stored, or the introduction of document uploads or additional tracking — we will email Customers at least 14 days
+      before it takes effect.
+    </p>
+  </div>
+
+  <!-- 15 -->
+  <div class="legal-section">
+    <p class="legal-num">Section 15</p>
+    <h2 id="contact">Contact us</h2>
+    <p>For privacy questions, access or correction requests, or complaints:</p>
+    <div class="legal-table-wrap">
+      <table class="legal-table">
+        <thead>
+          <tr><th>Entity</th><th>Contact</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lori and BetterActs Collective Inc.</td>
+            <td><a href="mailto:info@betteractscollective.org">info@betteractscollective.org</a></td>
+          </tr>
+          <tr>
+            <td>BetterActs Pty Ltd</td>
+            <td><a href="mailto:info@betteracts.com">info@betteracts.com</a></td>
+          </tr>
+          <tr>
+            <td>Registered office</td>
+            <td>Melbourne VIC 3003, Australia</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      We are an incorporated association registered in Victoria. Our registered address is available through the
+      Australian Business Register at <a href="https://abr.business.gov.au" target="_blank" rel="noopener noreferrer">abr.business.gov.au</a>
+      using ABN 90 406 224 512.
+    </p>
+  </div>
+
+</LegalPage>
