@@ -1,0 +1,102 @@
+---
+import Layout from './Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  heading: string;
+  lead: string;
+  lastUpdated: string;
+  sections: { id: string; label: string }[];
+}
+
+const { title, heading, lead, lastUpdated, sections } = Astro.props;
+---
+
+<Layout title={title}>
+
+<Nav />
+
+<!-- ============================================ -->
+<!-- HEADER                                       -->
+<!-- ============================================ -->
+<section class="bg-cream pt-32 md:pt-40 pb-16 md:pb-20">
+  <div class="max-w-4xl mx-auto px-6 md:px-10">
+    <div class="fade-in">
+      <p class="text-xs md:text-sm uppercase tracking-[0.2em] font-semibold text-muted-text mb-4">Legal</p>
+      <h1 class="font-heading font-bold text-[40px] md:text-[64px] leading-[1.1] text-dark mb-6">
+        {heading}
+      </h1>
+      <p class="text-lg md:text-xl text-dark/80 font-medium mb-6 font-heading" style="font-variation-settings: 'opsz' 20;">
+        {lead}
+      </p>
+      <span class="inline-flex items-center gap-2 text-sm font-medium text-dark/70 bg-white/70 rounded-full px-4 py-1.5">
+        Last updated: {lastUpdated}
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- CONTENTS                                     -->
+<!-- ============================================ -->
+<section class="bg-cream pb-16 md:pb-20">
+  <div class="max-w-4xl mx-auto px-6 md:px-10">
+    <div class="fade-in bg-white rounded-2xl p-7 md:p-9">
+      <p class="text-xs md:text-sm uppercase tracking-[0.2em] font-semibold text-muted-text mb-5">Contents</p>
+      <nav class="legal-toc grid sm:grid-cols-2 gap-x-10">
+        {sections.map((section, i) => (
+          <a href={`#${section.id}`}><span>{String(i + 1).padStart(2, '0')}</span>{section.label}</a>
+        ))}
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- BODY                                         -->
+<!-- ============================================ -->
+<section class="bg-white py-20 md:py-28">
+  <div class="max-w-4xl mx-auto px-6 md:px-10">
+    <div class="legal-body">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- QUESTIONS                                    -->
+<!-- ============================================ -->
+<section class="bg-cream py-20 md:py-28">
+  <div class="max-w-4xl mx-auto px-6 md:px-10">
+    <div class="fade-in">
+      <h2 class="font-heading text-[32px] md:text-[44px] font-bold text-dark mb-6 leading-tight">
+        Questions about this?
+      </h2>
+      <p class="text-base md:text-lg text-muted-text leading-relaxed mb-8">
+        We'd rather you asked than wondered. Get in touch and a real person will answer.
+      </p>
+      <a href="/get-in-touch" class="inline-flex items-center px-7 py-3.5 rounded-full bg-orange text-white font-semibold text-base btn-hover">
+        Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+
+<Footer />
+
+<script>
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  fadeEls.forEach(el => fadeObserver.observe(el));
+</script>
+
+</Layout>
